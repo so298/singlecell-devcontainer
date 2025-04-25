@@ -1,3 +1,5 @@
+# NOTE: This workflow is for the template master repo only. You can remove it from your fork.
+
 name: Docker build and push
 
 on:
@@ -10,6 +12,9 @@ on:
 
 jobs:
   build-and-push:
+    # Only run on the template's master repo
+    if: ${{ github.repository == 'so298/singlecell-devcontainer' }}
+
     runs-on: ubuntu-latest
 
     steps:
