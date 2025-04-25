@@ -1,8 +1,6 @@
 {
   "name": "Single-cell Analysis Environment",
-  "build": {
-    "dockerfile": "./Dockerfile"
-  },
+  "image": "ghcr.io/so298/singlecell-devcontainer:latest",
   "runArgs": ["--platform=linux/amd64"],
   "customizations": {
     "vscode": {
