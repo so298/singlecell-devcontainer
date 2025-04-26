@@ -6,11 +6,11 @@
     "vscode": {
       "settings": {
         // R settings
-        "r.rterm.linux": "/usr/bin/R", // Path to R executable
+        "r.rterm.linux": "/workspace/.venv/bin/radian", // Path to R executable
         "r.bracketedPaste": true,
-        "r.plot.useHttpgd": true // Use httpgd for plotting
+        "r.plot.useHttpgd": true, // Use httpgd for plotting
+        "r.libPaths": ["/home/vscode/R/library"]
       },
-
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
         // R support
