@@ -18,7 +18,9 @@
         // Python support
         "ms-python.python",
         "ms-toolsai.jupyter",
-        "ms-python.black-formatter"
+        "ms-python.black-formatter",
+        // Utility
+        "mathematic.vscode-pdf"
       ]
     }
   },
