@@ -71,8 +71,8 @@ RUN --mount=type=cache,target=/home/vscode/.cache/R \
     R -e "remotes::install_github('satijalab/seurat', 'seurat5', upgrade = 'never', Ncpus=parallel::detectCores())" && \
     R -e "remotes::install_github('mojaveazure/seurat-disk', upgrade = 'never', Ncpus=parallel::detectCores())" && \
     # Other utilities (languageserver, httpgd, IRkernel)
-    R -e "remotes::install_github('languageserver', Ncpus=parallel::detectCores())" && \
-    R -e "remotes::install_github('httpgd', Ncpus=parallel::detectCores())"
+    R -e "remotes::install_github('REditorSupport/languageserver', Ncpus=parallel::detectCores())" && \
+    R -e "remotes::install_github('nx10/httpgd', Ncpus=parallel::detectCores())"
 
 RUN sudo chown -R vscode:vscode /workspace
 
