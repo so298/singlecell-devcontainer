@@ -66,7 +66,7 @@ RUN --mount=type=cache,target=/home/vscode/.cache/R \
     R -e "install.packages('remotes', repos='https://cloud.r-project.org/')" && \
     R -e "install.packages(c('tidyverse', 'devtools', 'BiocManager', 'Matrix', 'irlba', 'igraph', 'patchwork', 'ggplot2', 'dplyr', 'hdf5r'), repos=Sys.getenv('R_DEFAULT_REPOS'), Ncpus=parallel::detectCores())" && \
     # Install Bioconductor core packages
-    R -e "BiocManager::install(c('BiocGenerics', 'GenomeInfoDb', 'GenomicRanges', 'SummarizedExperiment', 'SingleCellExperiment'), update=FALSE, ask=FALSE, Ncpus=parallel::detectCores())" && \
+    R -e "BiocManager::install(c('BiocGenerics', 'GenomeInfoDb', 'GenomicRanges', 'SummarizedExperiment', 'SingleCellExperiment', 'zellkonverter'), update=FALSE, ask=FALSE, Ncpus=parallel::detectCores())" && \
     # Install Seurat and SeuratDisk
     R -e "remotes::install_github('satijalab/seurat', 'seurat5', upgrade = 'never', Ncpus=parallel::detectCores())" && \
     R -e "remotes::install_github('mojaveazure/seurat-disk', upgrade = 'never', Ncpus=parallel::detectCores())" && \
