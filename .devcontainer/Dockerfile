@@ -20,6 +20,7 @@ RUN --mount=type=cache,target=/var/cache/apt \
     ca-certificates \
     curl \
     wget \
+    cmake \
     gnupg \
     # R dependencies
     libssl-dev \
