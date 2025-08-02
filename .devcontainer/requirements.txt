@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+scanpy>=1.10
+matplotlib
+seaborn
+scikit-learn
+jupyterlab
+ipykernel
+radian

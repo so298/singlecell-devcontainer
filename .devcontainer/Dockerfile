@@ -80,14 +80,14 @@ RUN sudo chown -R vscode:vscode /workspace
 # --- Install Python ---
 # Install Python packages as vscode user
 ENV PATH="$WORKDIR/.venv/bin:$PATH"
-RUN uv venv --seed --python 3.12
+RUN uv venv --seed --python 3.11
 RUN --mount=type=cache,target=/home/vscode/.cache/uv \
     uv pip install --no-cache-dir \
     numpy \
     scipy \
     pandas \
-    anndata \
-    scanpy \
+    "scanpy>=1.10" \
+    "anndata>=0.10" \
     matplotlib \
     seaborn \
     scikit-learn \
